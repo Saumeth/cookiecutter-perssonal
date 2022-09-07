@@ -22,6 +22,7 @@ dependencies:
   - pip:
     {% if cookiecutter.project_packages == "All" -%}
     - altair==4.2.0
+    - pandoc==2.12
     - attrs==21.4.0
     - blinker==1.5
     - cachetools==5.2.0
