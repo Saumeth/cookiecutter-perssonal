@@ -11,11 +11,18 @@ subprocess.call(['git', 'init'])
 subprocess.call(['git', 'branch', '-m', 'development'])
 subprocess.call(['git', 'add', '.'])
 subprocess.call(['git', 'commit', '-m', 'Initial commit'])
+subprocess.call(['conda', 'env', 'create', '--file', 'environment.yml'])
+#subprocess.call(['conda', 'activate', '{{ cookiecutter.project_slug }}'])
+#subprocess.call(['pip', 'install', 'jupyter_contrib_nbextensions'])
+#subprocess.call(['jupyter', 'contrib', 'nbextension', 'install', '--user'])
+
+
 
 condition = "{{ cookiecutter.repository_remote }}"
 
 if condition == "Enlazar":
     subprocess.call(['git', 'remote', 'add', "{{ cookiecutter.git_url }}"])
+    
 
 
 
