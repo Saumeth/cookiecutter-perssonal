@@ -1,0 +1,40 @@
+# conda env create --file environment.yml
+name: {{ cookiecutter.project_slug }}
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  {% if cookiecutter.project_packages == "All" -%}
+  - fs
+  - jupyter
+  - pathlib
+  - pandas
+  - geopandas
+  - numpy
+  - matplotlib
+  {% endif -%}
+  - pip
+  {% if cookiecutter.project_packages == "All" -%}
+  - pyprojroot
+  {% endif -%}
+  - python={{ cookiecutter.python_version }}
+  - pip:
+    {% if cookiecutter.project_packages == "All" -%}
+    - pyhere
+    - nodejs==0.1.1
+    - jupyter-contrib-core==0.4.0
+    - jupyter-contrib-nbextensions==0.5.1
+    - jupyter-highlight-selected-word==0.2.0
+    - jupyter-kite==2.0.2
+    - jupyter-latex-envs==1.4.6
+    - jupyter-nbextensions-configurator==0.5.0
+    - jupyterlab==3.0.0
+    - jupyterlab-kite==2.0.2
+    - Fiona==1.8.21
+    {% endif -%}
+
+    {% if cookiecutter.desig == "Structural" -%}
+    - handcalcs
+    - forallpeople
+    {% endif -%}
