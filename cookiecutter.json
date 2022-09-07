@@ -8,7 +8,6 @@
     "proyecto":"Untitle",
     "project_name":"{{ cookiecutter.proyecto.lower().replace(' ', '_').replace('-','_') }}",
     "repository_remote":["No enlazar", "Enlazar"],
-    "git_url":"URL GitHub",
-    "desig":["No Structural", "Structural"]
+    "git_url":"URL GitHub"
  
 }
