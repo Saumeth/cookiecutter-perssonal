@@ -21,7 +21,7 @@ subprocess.call(['conda', 'env', 'create', '--file', 'environment.yml'])
 condition = "{{ cookiecutter.repository_remote }}"
 
 if condition == "Enlazar":
-    subprocess.call(['git', 'remote', 'add', "{{ cookiecutter.git_url }}"])
+    subprocess.call(['git', 'remote', 'add', 'origin', "{{ cookiecutter.git_url }}"])
     
 
 
