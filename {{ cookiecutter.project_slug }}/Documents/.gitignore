@@ -1,8 +1,6 @@
 # ignorar los .csv
 *xlsm
-*xlsx
 *png
-*csv
 *pdf
 *shx
 *shp
@@ -10,8 +8,6 @@
 *cpg
 *qgz
 .virtual_documents/
-*xlsx
-*xlsm
 
 
 # Byte-compiled / optimized / DLL files
